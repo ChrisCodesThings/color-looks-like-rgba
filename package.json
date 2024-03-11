@@ -1,15 +1,15 @@
 {
-  "name": "@chriscodesthings/stub-repo",
+  "name": "@chriscodesthings/color-looks-like-rgba",
   "version": "0.1.0",
-  "description": "npm package template",
+  "description": "Determine if a set of values could be an RGBA color",
   "keywords": [
-    "stub",
-    "package",
-    "template"
+    "color",
+    "is",
+    "rgba"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChrisCodesThings/stub-repo.git"
+    "url": "git+https://github.com/ChrisCodesThings/color-looks-like-rgba.git"
   },
   "main": "index.js",
   "type": "module",
@@ -23,7 +23,7 @@
     "node": ">=18.0.0"
   },
   "bugs": {
-    "url": "https://github.com/ChrisCodesThings/stub-repo/issues"
+    "url": "https://github.com/ChrisCodesThings/color-looks-like-rgba/issues"
   },
   "scripts": {
     "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
