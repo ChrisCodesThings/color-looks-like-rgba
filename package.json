@@ -32,8 +32,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "auto-changelog": "*",
-    "jest": "*"
+    "auto-changelog": "^2.4.0",
+    "jest": "^29.7.0"
   },
   "publishConfig": {
     "access": "public"
