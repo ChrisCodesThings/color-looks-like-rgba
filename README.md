@@ -20,12 +20,12 @@ console.log(colorLooksLikeRGBA([100, 149, 237, 1])); // cornflowerblue
 ## Syntax
 
 ```js
-colorLooksLikeRGBA(arr);
+colorLooksLikeRGBA(color);
 ```
 
 ### Parameters
 
-- *arr*: an array containing red, green, blue and (optional) alpha values
+- *color*: an array containing red, green, blue and (optional) alpha values
 
 ### Return Value
 
