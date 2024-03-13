@@ -1,10 +1,11 @@
 {
   "name": "@chriscodesthings/color-looks-like-rgba",
   "version": "1.0.1",
-  "description": "Determine if a set of values could be an RGBA color",
+  "description": "Determine if a set of values could be an RGB or RGBA color",
   "keywords": [
     "color",
     "is",
+    "rgb",
     "rgba"
   ],
   "repository": {

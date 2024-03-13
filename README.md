@@ -1,6 +1,6 @@
 # color-looks-like-rgba &middot; [![Test workflow status](https://github.com/ChrisCodesThings/color-looks-like-rgba/actions/workflows/test.yml/badge.svg)](../../actions/workflows/test.yml) [![NPM Version](https://img.shields.io/npm/v/@chriscodesthings/color-looks-like-rgba)](https://www.npmjs.com/package/@chriscodesthings/color-looks-like-rgba) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-> **Determine if a set of values could be an RGBA color**
+> **Determine if a set of values could be an RGB or RGBA color**
 
 ## Install
 
@@ -20,16 +20,17 @@ console.log(colorLooksLikeRGBA([100, 149, 237, 1])); // cornflowerblue
 ## Syntax
 
 ```js
-colorLooksLikeRGBA(color);
+colorLooksLikeRGBA([r, g, b, a]);
 ```
 
 ### Parameters
 
-- *color*: an array containing red, green, blue and (optional) alpha values
+- *r, g, b*: red, green and blue values in the range 0-255
+- *a* (optional): alpha value in the range 0-1
 
 ### Return Value
 
-Returns true if the values could be an RGBA color, false otherwise.
+Returns `true` if the values could be an RGBA color, `false` otherwise.
 
 ## Description
 
@@ -50,4 +51,4 @@ Consider these examples:
 [  0,   0,   0, 1] // Black
 ```
 
-You can see, while there are differences in the allowed range for each value, there is also a lot of crossover. RGBA values are also often valid HSL values and vice versa, but they translate to very different colours. 
+As you can see, while there are differences in the allowed range for each value, there is also a lot of crossover. RGBA values are also often valid HSL values and vice versa, but they translate to very different colours. 
