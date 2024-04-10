@@ -1,9 +1,11 @@
+// @ts-check
 
+/**
+ * Determine if a set of values could be an RGB or RGBA color
+ * @param {[number, number, number]|[number, number, number, number]} rgba Array containing red, green, blue and (optional) alpha values
+ * @returns {boolean}
+ */
 export default function (rgba) {
-    if (!Array.isArray(rgba)) {
-        return false;
-    }
-
     return (
         (rgba.length == 3 || rgba.length == 4)
         && rgba[0] >= 0 && rgba[0] <= 255
