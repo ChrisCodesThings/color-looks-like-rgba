@@ -24,7 +24,7 @@ White in HSL turns into dark green as RGB but both are valid
 
 A nice orange colour in HSL turns green as RGB, while brown as RGB turns green as HSL!
 
-As you can see, while there are differences in the allowed range for each value, there is also a lot of crossover. RGBA values are also often valid HSL values and vice versa, but they translate to very different colours. 
+As you can see, while there are differences in the allowed range for each value, there is also a lot of crossover which produce very different colours. 
 
 ### See...
 - [Install/Usage](#install "Install and Usage")
@@ -34,13 +34,13 @@ As you can see, while there are differences in the allowed range for each value,
 
 ---
 
-## Usage
+## Install
 
 ```sh
 npm install --save @chriscodesthings/color-looks-like-rgba
 ```
 
-## Use
+## Usage
 
 ```js
 import colorLooksLikeRGBA from '@chriscodesthings/color-looks-like-rgba';
@@ -69,7 +69,7 @@ Returns `true` if the values could be an RGBA color, `false` otherwise.
 ```js
 // called when some input changes
 function setNewColour(r, g, b, a) {
-    if( !colourLooksLikeRGBA[r,g,b,a]) {
+    if( !colorLooksLikeRGBA[r, g, b, a]) {
         return;
     }
 
@@ -79,5 +79,5 @@ function setNewColour(r, g, b, a) {
 
 ## See Also...
 
-- [color-object: Simple, lightweight class to store and manipulate a color, and convert between formats](https://github.com/ChrisCodesThings/color-object "Simple, lightweight class to store and manipulate a color, and convert between formats")
-- [is-css-hex-color: Determine if a string is a CSS hex color code](https://github.com/ChrisCodesThings/is-css-hex-color "is-css-hex-color: Determine if a string is a CSS hex color code")
+- [**color-object** - Simple, lightweight class to store and manipulate a color, and convert between formats](https://github.com/ChrisCodesThings/color-object "Simple, lightweight class to store and manipulate a color, and convert between formats")
+- [**is-css-hex-color** - Determine if a string is a CSS hex color code](https://github.com/ChrisCodesThings/is-css-hex-color "is-css-hex-color: Determine if a string is a CSS hex color code")
