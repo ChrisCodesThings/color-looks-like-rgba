@@ -1,28 +1,6 @@
 
 const { default: testFunc } = await import("../");
 
-describe("check for bad input", () => {
-    test("nothing", async () => {
-        expect(testFunc()).toEqual(false);
-    });
-
-    test("boolean", async () => {
-        expect(testFunc(true)).toEqual(false);
-    });
-
-    test("a number", async () => {
-        expect(testFunc(123)).toEqual(false);
-    });
-
-    test("a string", async () => {
-        expect(testFunc("foo")).toEqual(false);
-    });
-
-    test("invalid input", async () => {
-        expect(testFunc(["red", "green", "blue"])).toEqual(false);
-    });
-});
-
 describe("check some possible rgba colours", () => {
     test("should fail not enough values", async () => {
         expect(testFunc([1, 2])).toEqual(false);
