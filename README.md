@@ -1,8 +1,40 @@
-# color-looks-like-rgba &middot; [![Test workflow status](https://github.com/ChrisCodesThings/color-looks-like-rgba/actions/workflows/test.yml/badge.svg)](../../actions/workflows/test.yml) [![NPM Version](https://img.shields.io/npm/v/@chriscodesthings/color-looks-like-rgba)](https://www.npmjs.com/package/@chriscodesthings/color-looks-like-rgba) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+# color-looks-like-rgba <br> [![Test workflow status](https://github.com/ChrisCodesThings/color-looks-like-rgba/actions/workflows/test.yml/badge.svg)](../../actions/workflows/test.yml) [![NPM Version](https://img.shields.io/npm/v/@chriscodesthings/color-looks-like-rgba)](https://www.npmjs.com/package/@chriscodesthings/color-looks-like-rgba) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 > **Determine if a set of values could be an RGB or RGBA color**
 
-## Install
+## Description
+
+Function to determine if a given set of values *could be* an RGBA color. 
+
+The reason we can only say 'looks like', is because it's impossible to be sure. 
+
+### Consider these examples:
+
+Black - this is the only colour that works for both formats:
+
+```
+[0, 0, 0, 1] // RGBA
+[0, 0, 0, 1] // HSL
+```
+
+White in HSL turns into dark green as RGB but both are valid
+```
+[0, 0, 100, 1] // White as HSL
+```
+
+A nice orange colour in HSL turns green as RGB, while brown as RGB turns green as HSL!
+
+As you can see, while there are differences in the allowed range for each value, there is also a lot of crossover. RGBA values are also often valid HSL values and vice versa, but they translate to very different colours. 
+
+### See...
+- [Install/Usage](#install "Install and Usage")
+- [Syntax](#syntax "Syntax")
+- [Examples](#examples "Examples")
+- [See Also](#see-also "See Also")
+
+---
+
+## Usage
 
 ```sh
 npm install --save @chriscodesthings/color-looks-like-rgba
@@ -20,7 +52,7 @@ console.log(colorLooksLikeRGBA([100, 149, 237, 1])); // cornflowerblue
 ## Syntax
 
 ```js
-colorLooksLikeRGBA([r, g, b, a]);
+colorLooksLikeRGBA([r, g, b, (a)]);
 ```
 
 ### Parameters
@@ -28,27 +60,24 @@ colorLooksLikeRGBA([r, g, b, a]);
 - *r, g, b*: red, green and blue values in the range 0-255
 - *a* (optional): alpha value in the range 0-1
 
-### Return Value
+### Returns
 
 Returns `true` if the values could be an RGBA color, `false` otherwise.
 
-## Description
+## Examples
 
-Function to determine if a given set of values *could be* an RGBA color. 
+```js
+// called when some input changes
+function setNewColour(r, g, b, a) {
+    if( !colourLooksLikeRGBA[r,g,b,a]) {
+        return;
+    }
 
-The reason we can only say 'looks like', is because it's impossible to be sure. 
-
-Consider these examples:
-```
-// Valid RGBA colours
-[255, 255, 255, 1] // White
-[100, 149, 237, 1] // Cornflowerblue
-[  0,   0,   0, 1] // Black
-
-// Valid HSL colours
-[  0,   0, 100, 1] // White
-[219,  79,  66, 1] // Cornflowerblue
-[  0,   0,   0, 1] // Black
+    // do something
+}
 ```
 
-As you can see, while there are differences in the allowed range for each value, there is also a lot of crossover. RGBA values are also often valid HSL values and vice versa, but they translate to very different colours. 
+## See Also...
+
+- [color-object: Simple, lightweight class to store and manipulate a color, and convert between formats](https://github.com/ChrisCodesThings/color-object "Simple, lightweight class to store and manipulate a color, and convert between formats")
+- [is-css-hex-color: Determine if a string is a CSS hex color code](https://github.com/ChrisCodesThings/is-css-hex-color "is-css-hex-color: Determine if a string is a CSS hex color code")
