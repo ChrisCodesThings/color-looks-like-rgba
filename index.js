@@ -1,2 +1,3 @@
-export { default } from "./src/colorLooksLikeRGBA.js";
+// @ts-check
 
+export { default } from "./src/colorLooksLikeRGBA.js";

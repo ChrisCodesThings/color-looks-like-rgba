@@ -28,6 +28,7 @@ As you can see, while there are differences in the allowed range for each value,
 
 ### See...
 - [Install/Usage](#install "Install and Usage")
+- [Types](#types "Types")
 - [Syntax](#syntax "Syntax")
 - [Examples](#examples "Examples")
 - [See Also](#see-also "See Also")
@@ -48,6 +49,11 @@ import colorLooksLikeRGBA from '@chriscodesthings/color-looks-like-rgba';
 console.log(colorLooksLikeRGBA([100, 149, 237, 1])); // cornflowerblue
 // => true
 ```
+
+## Types
+
+This package uses types from:
+- [**basic-color-types**: Defines named types for common color formats](https://github.com/ChrisCodesThings/basic-color-types "Defines named types for common color formats")
 
 ## Syntax
 
